@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atelier des pétales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="C:\Users\HP\Desktop\projet siteweb\fleur5.png" alt="logo" class="logo" />
+      <h1>Le jardin enchanté à l'éclat florale</h1>
+    </div>
+    <button id="view-cart-btn" class="btn primary">Voir ma commande (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Nos réalisations</h2>
+      <p class="subtitle">Ces fleurs sont cultivées et confectionnées par nous avec soin et amour car <strong>votre satisfaction est nôtre</strong></p>
+    </section>
+
+    <section id="products" class="grid">
+      <!-- Les cartes seront ajoutées ici via HTML statique ci-dessous -->
+      <article class="card">
+        <div class="card-image">
+          <img src="C:\Users\HP\Desktop\projet siteweb\fleur1.png" alt="Bouquet 1" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Bouquet 1</h3>
+          <p class="price">15 000 FCFA</p>
+          <button class="btn secondary view-btn" data-name="Bouquet 1" data-price="15000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur1.png">Voir +</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="C:\Users\HP\Desktop\projet siteweb\fleur2.png" alt="fleur2" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">ROSE BLANCHE.Marguerites</h3>
+          <p class="price">20 000 FCFA</p>
+          <button class="btn secondary view-btn" data-name="fleur2" data-price="20000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur2.png">Voir +</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="C:\Users\HP\Desktop\projet siteweb\fleur3.png" alt="fleur3" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">MAGUERITES BLANCHES.coeur jaune</h3>
+          <p class="price">10 000 FCFA</p>
+          <button class="btn secondary view-btn" data-name="fleur3" data-price="10000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur3.png">Voir +</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="C:\Users\HP\Desktop\projet siteweb\fleur4.png" alt="fleur4" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">TULIPES.rose</h3>
+          <p class="price">10 000 FCFA</p>
+          <button class="btn secondary view-btn" data-name="fleur4" data-price="10000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur4.png">Voir +</button>
+        </div>
+      </article>
+
+      <!-- ajoute d'autres cards si besoin -->
+    </section>
+  </main>
+
+  <!-- Modal détail produit -->
+  <div id="product-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Fermer">&times;</button>
+      <div class="modal-body">
+        <img id="modal-img" src="C:\Users\HP\Desktop\projet siteweb\fleur5.png" alt="fleur5" />
+        <div class="modal-info">
+          <h3 id="modal-title">Titre produit</h3>
+          <p id="modal-price">Prix</p>
+          <p id="modal-desc">Fleurs adaptées à vos goûts et styles; idéale pour tout événement.</p>
+          <div class="modal-actions">
+            <button id="add-to-cart" class="btn primary">Ajouter au panier</button>
+            <button id="close" class="btn">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
