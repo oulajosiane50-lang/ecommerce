@@ -1,95 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Atelier des pétales</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atelier de fleurs — Boutique</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <img src="C:\Users\HP\Desktop\projet siteweb\fleur5.png" alt="logo" class="logo" />
-      <h1>Le jardin enchanté à l'éclat florale</h1>
-    </div>
-    <button id="view-cart-btn" class="btn primary">Voir ma commande (<span id="cart-count">0</span>)</button>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="brand">Atelier de fleurs</h1>
+            <nav class="nav">
+                <a href="#boutique">Boutique</a>
+                <a href="#testimonials">Avis clients</a>
+                <a href="#blog">Conseils</a>
+                <a href="#contact">Contact</a>
+    </nav>
   </header>
+ <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <h2>Faites éclore la beauté chez vous</h2>
+                <p>Des fleurs fraîches et éclatantes, prêtes à être livrées. Commandez directement sur WhatsApp.</p>
+                <a class="cta" href="#boutique">Explorez nos réalisations</a>
+            </div>
+        </section>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Nos réalisations</h2>
-      <p class="subtitle">Ces fleurs sont cultivées et confectionnées par nous avec soin et amour car <strong>votre satisfaction est nôtre</strong></p>
-    </section>
-
-    <section id="products" class="grid">
-      <!-- Les cartes seront ajoutées ici via HTML statique ci-dessous -->
-      <article class="card">
-        <div class="card-image">
-          <img src="C:\Users\HP\Desktop\projet siteweb\fleur1.png" alt="Bouquet 1" />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Bouquet 1</h3>
-          <p class="price">15 000 FCFA</p>
-          <button class="btn secondary view-btn" data-name="Bouquet 1" data-price="15000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur1.png">Voir +</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-image">
-          <img src="C:\Users\HP\Desktop\projet siteweb\fleur2.png" alt="fleur2" />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">ROSE BLANCHE.Marguerites</h3>
-          <p class="price">20 000 FCFA</p>
-          <button class="btn secondary view-btn" data-name="fleur2" data-price="20000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur2.png">Voir +</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-image">
-          <img src="C:\Users\HP\Desktop\projet siteweb\fleur3.png" alt="fleur3" />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">MAGUERITES BLANCHES.coeur jaune</h3>
-          <p class="price">10 000 FCFA</p>
-          <button class="btn secondary view-btn" data-name="fleur3" data-price="10000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur3.png">Voir +</button>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-image">
-          <img src="C:\Users\HP\Desktop\projet siteweb\fleur4.png" alt="fleur4" />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">TULIPES.rose</h3>
-          <p class="price">10 000 FCFA</p>
-          <button class="btn secondary view-btn" data-name="fleur4" data-price="10000" data-img="C:\Users\HP\Desktop\projet siteweb\fleur4.png">Voir +</button>
-        </div>
-      </article>
-
-      <!-- ajoute d'autres cards si besoin -->
-    </section>
-  </main>
-
-  <!-- Modal détail produit -->
-  <div id="product-modal" class="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" id="modal-close" aria-label="Fermer">&times;</button>
-      <div class="modal-body">
-        <img id="modal-img" src="C:\Users\HP\Desktop\projet siteweb\fleur5.png" alt="fleur5" />
-        <div class="modal-info">
-          <h3 id="modal-title">Titre produit</h3>
-          <p id="modal-price">Prix</p>
-          <p id="modal-desc">Fleurs adaptées à vos goûts et styles; idéale pour tout événement.</p>
-          <div class="modal-actions">
-            <button id="add-to-cart" class="btn primary">Ajouter au panier</button>
-            <button id="close" class="btn">Fermer</button>
-          </div>
-        </div>
+        <section id="boutique" class="container products">
+            <h3>Nos fleurs</h3>
+            <div class="grid" id="product-grid">
+                <!-- Les cartes produits seront injectées par script.js -->
+            </div>
+        </section>
+    </main>
+     <!-- Avis clients -->
+  <section id="testimonials" class="testimonials-section">
+    <h2>Avis clients</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>“Bouquets magnifiques et service impeccable !”</p>
+        <span>- Amélie R.</span>
+      </div>
+      <div class="testimonial">
+        <p>“Livraison rapide et fleurs très fraîches. Je recommande !”</p>
+        <span>- Marc L.</span>
+      </div>
+      <div class="testimonial">
+        <p>“La composition de mon bouquet personnalisé m’a vraiment émerveillée !”</p>
+        <span>- Sophie D.</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Blog / conseils -->
+  <section id="blog" class="blog-section">
+    <h2>Conseils & Astuces</h2>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <h3>Comment choisir un bouquet parfait</h3>
+        <p>Nos astuces pour sélectionner les fleurs qui feront plaisir à vos proches.</p>
+      </div>
+      <div class="blog-card">
+        <h3>Entretenir vos fleurs</h3>
+        <p>Prolongez la durée de vie de vos bouquets grâce à nos conseils simples.</p>
+      </div>
+      <div class="blog-card">
+        <h3>Idées cadeaux floraux</h3>
+        <p>Des idées créatives pour offrir des fleurs à toutes occasions.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Animation fleurs tombantes -->
+  <div class="falling-flowers"></div>
+
+                
+                 </nav>
+             </div>
+    </header>
+<!-- Contact -->
+  <section id="contact" class="contact-section">
+    <h2>Transformez vos iées en bouquet, parlons-en!</h2>
+    <p>Email: atelierfleursci@gmail.com</p>
+    <p>Téléphone: +225 07 77 41 60 01</p>
+  </section>
+    
+
+    <section id="about" class="about-section">
+  <div class="about-container">
+    <h2>À coeur de fleurs</h2>
+    <p>
+      Bienvenue chez <strong>Atelier de fleurs</strong> ! Nous sommes passionnés par la création de bouquets uniques qui apportent beauté et bonheur à vos moments spéciaux. 
+      Chaque fleur est choisie avec soin pour offrir fraîcheur et élégance.
+    </p>
+    <p>
+      Notre mission est de rendre chaque occasion mémorable avec des compositions florales personnalisées et un service attentionné.
+    </p>
+  </div>
+</section>
+
+ <footer id="contact" class="site-footer">
+        <div class="container footer-inner">
+            <p>Des questions , envie d'un bouquet unique? contctez-nous!</p>
+
+             <!-- ✅ Infos de contact -->
+    <p>📞 Téléphone : +225 07 77 41 60 01</p>
+    <p>💬 WhatsApp : <a href="https://wa.me/2250777416001" target="_blank">Cliquez ici</a></p>
+    <p>✉️ Email : atelierfleursci@gmail.com</p>
+    <p>📍 Adresse : Cocody angré rue L209 ; ABIDJAN(Côte d'Ivoire)</p>
+
+     <p>© <span id="year"></span> Atelier de fleurs. Tous droits réservés.</p>
+
+        </div>
+    </footer>
+
+    <!-- Modal Voir -->
+    <div class="modal" id="view-modal" aria-hidden="true" role="dialog" aria-labelledby="view-title">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content">
+            <button class="modal-close" data-close-modal aria-label="Fermer">×</button>
+            <h4 id="view-title">Détails du produit</h4>
+            <img id="view-image" alt="Fleur" />
+            <div class="modal-body">
+                <h5 id="view-name"></h5>
+                <p id="view-price"></p>
+                <p id="view-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Acheter -->
+    <div class="modal" id="buy-modal" aria-hidden="true" role="dialog" aria-labelledby="buy-title">
+        <div class="modal-backdrop" data-close-modal></div>
+        <div class="modal-content">
+            <button class="modal-close" data-close-modal aria-label="Fermer">×</button>
+            <h4 id="buy-title">Finaliser la commande</h4>
+            <form id="order-form" class="order-form">
+                <div class="order-summary">
+                    <img id="buy-image" alt="Fleur" />
+                    <div>
+                        <h5 id="buy-name"></h5>
+                        <p id="buy-price"></p>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label>Quantité
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>Nom complet
+                        <input type="text" id="fullName" name="fullName" placeholder="Votre nom" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>Téléphone (WhatsApp)
+                        <input type="tel" id="phone" name="phone" placeholder="Ex: +2250700000000" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>Adresse de livraison
+                        <input type="text" id="address" name="address" placeholder="Ville, quartier, repère" required>
+                    </label>
+                </div>
+                <div class="form-row">
+                    <label>Message (optionnel)
+                        <textarea id="note" name="note" rows="3" placeholder="Couleur, heure de livraison, etc."></textarea>
+                    </label>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn-buy">Commander</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
