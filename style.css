@@ -75,24 +75,6 @@ body{
   margin-bottom: 15px;
 }
 
-/* À propos / Notre univers */
-.about-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-attachment: fixed; /* effet parallax */
-  background-image: url('fleurs-bg.jpg'); /* ajoute une image de fond */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-}
-
-.about-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(0,0,0,0.4); /* fond semi-transparent pour lisibilité */
-  padding: 20px;
-  border-radius: 15px;
-}
 
 /* Avis clients */
 .testimonials-section {
